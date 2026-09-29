@@ -1,0 +1,446 @@
+[
+ {
+  "id": "demo",
+  "slug": "golf",
+  "title": "Torneo de golf",
+  "edition": "2026",
+  "venue": "Club Campestre Guaymaral",
+  "date_label": "Noviembre 26, 2026",
+  "time_label": "6:00 a.m. – 5:00 p.m.",
+  "tagline": "Un espacio donde el deporte, las relaciones y los negocios se encuentran para fortalecer el ecosistema fintech.",
+  "hero_image": "/events/golf/hero.jpg",
+  "content": {
+   "extras": {
+    "title": "Experiencias adicionales",
+    "intro": "Complementos para los patrocinadores de Hoyo. No incluidos en el precio del paquete.",
+    "groups": [
+     {
+      "name": "Promocionales",
+      "items": [
+       {
+        "name": "Kit de golf: tees + marcadores",
+        "detail": "1 activación en campo",
+        "price": "$1M"
+       },
+       {
+        "name": "144 × 3 bolas brandeadas",
+        "detail": "1 activación en campo",
+        "price": "$13M"
+       }
+      ]
+     },
+     {
+      "name": "Hidratación / snacks",
+      "items": [
+       {
+        "name": "160 bebidas hidratantes no alcohólicas",
+        "detail": "3 activaciones en campo",
+        "price": "$2M"
+       },
+       {
+        "name": "8 botellas de whiskey",
+        "detail": "3 activaciones en campo",
+        "price": "$4M"
+       },
+       {
+        "name": "Snacks (Chocorramo o frutos secos)",
+        "detail": "2 activaciones en campo",
+        "price": "$1M"
+       },
+       {
+        "name": "1 nevera + hielo",
+        "detail": "",
+        "price": "$100K"
+       }
+      ]
+     },
+     {
+      "name": "Experiencia",
+      "items": [
+       {
+        "name": "Fotógrafo + impresión de fotografía física",
+        "detail": "1 activación en campo",
+        "price": "$3M"
+       },
+       {
+        "name": "Exhibición de carro",
+        "detail": "1 activación en campo",
+        "price": "$5M"
+       }
+      ]
+     }
+    ]
+   },
+   "combos": {
+    "title": "Premios de las rifas",
+    "items": [
+     {
+      "name": "Combo 1",
+      "items": [
+       "2 talegas PRO TaylorMade",
+       "2 bonos Adidas de $500K",
+       "1 tiquete aéreo",
+       "1 bono de hotel",
+       "2 audífonos de conducción ósea Garmin"
+      ]
+     },
+     {
+      "name": "Combo 2",
+      "items": [
+       "2 drivers TaylorMade",
+       "2 bonos TaylorMade de $500K",
+       "1 patineta eléctrica",
+       "1 bono de hotel",
+       "1 barra de sonido JBL",
+       "1 AirTags × 4 Apple"
+      ]
+     },
+     {
+      "name": "Combo 3",
+      "items": [
+       "2 híbridos TaylorMade",
+       "2 parlantes Sonos",
+       "1 AirPods Apple",
+       "1 boleta doble general Estéreo Picnic",
+       "1 putter TaylorMade",
+       "1 barra de sonido JBL"
+      ]
+     },
+     {
+      "name": "Combo 4",
+      "items": [
+       "2 wedges TaylorMade",
+       "2 Whoop band 5.0",
+       "1 reloj Garmin",
+       "1 máquina de café",
+       "1 AirTags × 4 Apple",
+       "1 putter TaylorMade"
+      ]
+     }
+    ]
+   },
+   "contacts": [
+    {
+     "name": "Paula Santander",
+     "role": "Account Manager Corporativos",
+     "email": "managersafiliados@colombiafintech.co",
+     "phone": "+57 310 300 3503"
+    },
+    {
+     "name": "Helena Posada",
+     "role": "Account Manager Asociados",
+     "email": "fintechmanager@colombiafintech.co",
+     "phone": "+57 316 447 5889"
+    },
+    {
+     "name": "Ana María Penagos",
+     "role": "Account Manager Asociados",
+     "email": "managersasociados@colombiafintech.co",
+     "phone": "+57 302 212 3655"
+    }
+   ]
+  },
+  "published": true,
+  "packages": [
+   {
+    "id": "demo-registro",
+    "event_id": "demo",
+    "slug": "registro",
+    "name": "Registro",
+    "benefits": [
+     "144 refrigerios de llegada para jugadores",
+     "1 counter de registro brandeado",
+     "Backing cobrandeado con CF",
+     "Kit de bienvenida brandeado: totebag + 3 bolas",
+     "Almuerzo + refrigerio staff (1 px)",
+     "3 invitaciones para jugadores (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 30000000,
+    "price_non_member": 36000000,
+    "capacity": 1,
+    "images": [
+     "/events/golf/registro-1.jpeg",
+     "/events/golf/registro-2.jpeg"
+    ],
+    "sort": 1,
+    "sponsorships": [
+     {
+      "id": "demo-registro",
+      "package_id": "demo-registro",
+      "company_name": "Snowflake",
+      "hubspot_company_id": null,
+      "logo_url": "/events/golf/logos/snowflake.png",
+      "created_by": "demo",
+      "created_at": "2026-09-01T00:00:00Z"
+     }
+    ]
+   },
+   {
+    "id": "demo-gorras",
+    "event_id": "demo",
+    "slug": "gorras",
+    "name": "Gorras",
+    "benefits": [
+     "144 gorras con el logo de la marca + logo Colombia Fintech",
+     "2 invitaciones para jugadores (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 22000000,
+    "price_non_member": 27000000,
+    "capacity": 1,
+    "images": [
+     "/events/golf/gorras-1.png",
+     "/events/golf/gorras-2.png"
+    ],
+    "sort": 2,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-termos",
+    "event_id": "demo",
+    "slug": "termos",
+    "name": "Termos",
+    "benefits": [
+     "144 termos con el logo de la marca + logo Colombia Fintech",
+     "1 invitación para jugador (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 12000000,
+    "price_non_member": 15000000,
+    "capacity": 1,
+    "images": [
+     "/events/golf/termos-1.cutout.png",
+     "/events/golf/termos-2.cutout.png"
+    ],
+    "sort": 3,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-camisetas",
+    "event_id": "demo",
+    "slug": "camisetas",
+    "name": "Camisetas",
+    "benefits": [
+     "144 camisetas brandeadas con logo de la marca en la manga + logo CF",
+     "Almuerzo + refrigerio staff (1 px)",
+     "4 invitaciones para jugadores (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 30000000,
+    "price_non_member": 36000000,
+    "capacity": 1,
+    "images": [
+     "/events/golf/camisetas-1.jpeg",
+     "/events/golf/camisetas-2.jpeg"
+    ],
+    "sort": 4,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-refrigerio",
+    "event_id": "demo",
+    "slug": "refrigerio",
+    "name": "Refrigerio",
+    "benefits": [
+     "144 refrigerios (kiosko) para jugadores",
+     "144 bebidas no alcohólicas",
+     "5 habladores",
+     "Almuerzo + refrigerio staff (1 px)",
+     "1 invitación para jugador (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 10000000,
+    "price_non_member": 14000000,
+    "capacity": 1,
+    "images": [
+     "/events/golf/refrigerio-1.jpeg",
+     "/events/golf/refrigerio-2.jpeg"
+    ],
+    "sort": 5,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-hoyo-basic",
+    "event_id": "demo",
+    "slug": "hoyo-basic",
+    "name": "Hoyo Basic",
+    "benefits": [
+     "Backing y counter brandeado",
+     "Parasol, 1 mesa y 4 sillas",
+     "2 vallas 2×1 con branding",
+     "Moqueta",
+     "Almuerzo + refrigerio staff (2 px)",
+     "2 invitaciones para jugadores (incluida tarifa caddie)"
+    ],
+    "note": "Adicional: escoger experiencia (no incluida en el precio).",
+    "price_member": 12000000,
+    "price_non_member": 14000000,
+    "capacity": 14,
+    "images": [
+     "/events/golf/hoyo-basic-1.jpeg",
+     "/events/golf/hoyo-basic-2.jpeg"
+    ],
+    "sort": 6,
+    "sponsorships": [
+     {
+      "id": "demo-hoyo-basic",
+      "package_id": "demo-hoyo-basic",
+      "company_name": "Lulo Bank",
+      "hubspot_company_id": null,
+      "logo_url": "/events/golf/logos/lulo-bank.png",
+      "created_by": "demo",
+      "created_at": "2026-09-01T00:00:00Z"
+     }
+    ]
+   },
+   {
+    "id": "demo-hoyo-concurso",
+    "event_id": "demo",
+    "slug": "hoyo-concurso",
+    "name": "Hoyo Concurso",
+    "benefits": [
+     "Longest Drive o Closest to the Pin (se define según el hoyo asignado)",
+     "Backing y counter brandeado",
+     "Parasol, 1 mesa y 4 sillas",
+     "2 vallas 2×1 con branding",
+     "Moqueta",
+     "Almuerzo + refrigerio staff (2 px)",
+     "Premio: driver, híbrido, wedge o putter TaylorMade, según el hoyo",
+     "3 invitaciones para jugadores (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 15000000,
+    "price_non_member": 18000000,
+    "capacity": 4,
+    "images": [
+     "/events/golf/hoyo-concurso-1.jpeg",
+     "/events/golf/hoyo-concurso-2.jpeg"
+    ],
+    "sort": 7,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-caddies",
+    "event_id": "demo",
+    "slug": "caddies",
+    "name": "Caddies",
+    "benefits": [
+     "144 petos brandeados para caddies",
+     "1 invitación para jugador (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 10000000,
+    "price_non_member": 15000000,
+    "capacity": 1,
+    "images": [
+     "/events/golf/caddies-1.jpeg",
+     "/events/golf/caddies-2.jpeg"
+    ],
+    "sort": 8,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-almuerzo",
+    "event_id": "demo",
+    "slug": "almuerzo",
+    "name": "Almuerzo co-brandeado",
+    "benefits": [
+     "Almuerzo para 144 jugadores",
+     "25 habladores co-brandeados",
+     "2 tótems brandeables",
+     "Charla de 10 minutos",
+     "Almuerzo + refrigerio staff (1 px)",
+     "3 invitaciones para jugadores (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 30000000,
+    "price_non_member": 36000000,
+    "capacity": 2,
+    "images": [
+     "/events/golf/almuerzo-1.jpeg",
+     "/events/golf/almuerzo-2.jpeg"
+    ],
+    "sort": 9,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-rifas",
+    "event_id": "demo",
+    "slug": "rifas",
+    "name": "Sponsor Rifas",
+    "benefits": [
+     "8 rifas patrocinadas por la marca",
+     "Mención recurrente del maestro de ceremonias durante la premiación",
+     "Backing multilogo + registro fotográfico exclusivo en la entrega de premios",
+     "Almuerzo + refrigerio staff (1 px)",
+     "2 invitaciones para jugadores (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 17000000,
+    "price_non_member": 21000000,
+    "capacity": 4,
+    "images": [
+     "/events/golf/rifas-1.jpeg",
+     "/events/golf/rifas-2.jpeg"
+    ],
+    "sort": 10,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-carrobar",
+    "event_id": "demo",
+    "slug": "carrobar",
+    "name": "Carrobar",
+    "benefits": [
+     "Alquiler de carro de golf",
+     "80 snacks, 60 cafés, 100 cervezas y 100 bebidas no alcohólicas",
+     "Vasos brandeados",
+     "Personal de servicio",
+     "1 invitación para jugador (incluida tarifa caddie)"
+    ],
+    "note": "No incluye bebidas alcohólicas.",
+    "price_member": 10000000,
+    "price_non_member": 14000000,
+    "capacity": 2,
+    "images": [
+     "/events/golf/carrobar-1.jpeg",
+     "/events/golf/carrobar-2.png"
+    ],
+    "sort": 11,
+    "sponsorships": []
+   },
+   {
+    "id": "demo-carros-golf",
+    "event_id": "demo",
+    "slug": "carros-golf",
+    "name": "Carros de golf de desplazamiento",
+    "benefits": [
+     "10 carritos con branding para el desplazamiento de marcas",
+     "Almuerzo + refrigerio staff (2 px)",
+     "1 invitación para jugador (incluida tarifa caddie)"
+    ],
+    "note": null,
+    "price_member": 13000000,
+    "price_non_member": 16000000,
+    "capacity": 1,
+    "images": [
+     "/events/golf/carros-golf-1.png",
+     "/events/golf/carros-golf-2.png"
+    ],
+    "sort": 12,
+    "sponsorships": [
+     {
+      "id": "demo-carros-golf",
+      "package_id": "demo-carros-golf",
+      "company_name": "Payments Way",
+      "hubspot_company_id": null,
+      "logo_url": "/events/golf/logos/payments-way.png",
+      "created_by": "demo",
+      "created_at": "2026-09-01T00:00:00Z"
+     }
+    ]
+   }
+  ]
+ }
+]
