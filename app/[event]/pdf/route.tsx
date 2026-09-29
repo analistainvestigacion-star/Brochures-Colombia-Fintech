@@ -183,7 +183,16 @@ function Brochure({ ev, photos, logos, logoCF }: { ev: BrochureEvent; photos: (I
   );
 }
 
-export async function GET(request: Request, { params }: { params: Promise<{ event: string }> }) {
+export async function GET(request: Request, ctx: { params: Promise<{ event: string }> }) {
+  try {
+    return await buildPdf(request, ctx);
+  } catch (e) {
+    console.error("Error generando el PDF", e);
+    return new Response(`No se pudo generar el PDF: ${(e as Error).message}`, { status: 500 });
+  }
+}
+
+async function buildPdf(request: Request, { params }: { params: Promise<{ event: string }> }) {
   const { event: slug } = await params;
   const ev = await getEvent(slug);
   if (!ev) return new Response("No encontrado", { status: 404 });
