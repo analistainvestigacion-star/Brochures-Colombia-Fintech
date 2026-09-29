@@ -118,13 +118,13 @@ on conflict (event_id, slug) do update set
   benefits = excluded.benefits, note = excluded.note;
 
 -- Patrocinios que ya aparecían en el brochure
-insert into public.sponsorships (package_id, company_name, logo_url, created_by)
-select pk.id, s.company, s.logo, 'brochure-pptx'
+insert into public.sponsorships (package_id, company_name, logo_url, logo_bg, created_by)
+select pk.id, s.company, s.logo, s.bg, 'brochure-pptx'
 from (values
-  ('registro', 'Snowflake', '/events/golf/logos/snowflake.png'),
-  ('hoyo-basic', 'Lulo Bank', '/events/golf/logos/lulo-bank.png'),
-  ('carros-golf', 'Payments Way', '/events/golf/logos/payments-way.png')
-) as s(pkg, company, logo)
+  ('registro', 'Snowflake', '/events/golf/logos/snowflake.png', 'light'),
+  ('hoyo-basic', 'Lulo Bank', '/events/golf/logos/lulo-bank.png', 'dark'),
+  ('carros-golf', 'Payments Way', '/events/golf/logos/payments-way.png', 'light')
+) as s(pkg, company, logo, bg)
 join public.packages pk on pk.slug = s.pkg
 join public.events ev on ev.id = pk.event_id and ev.slug = 'golf'
 where not exists (

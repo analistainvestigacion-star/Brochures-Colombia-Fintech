@@ -42,7 +42,7 @@ async function fetchImage(url: string, origin: string, width?: number): Promise<
   }
 }
 
-function PackageBlock({ pkg, i, photo, logos }: { pkg: Package; i: number; photo: Img | null; logos: Map<string, Img | null> }) {
+function PackageBlock({ pkg, photo, logos }: { pkg: Package; photo: Img | null; logos: Map<string, Img | null> }) {
   const taken = pkg.sponsorships.length;
   const full = taken >= pkg.capacity;
   const tone = full ? { color: C.gray } : {};
@@ -51,8 +51,7 @@ function PackageBlock({ pkg, i, photo, logos }: { pkg: Package; i: number; photo
       <View style={s.row}>
         {photo && <Image src={photo} style={[s.photo, full ? { opacity: 0.45 } : {}]} />}
         <View style={{ flex: 1 }}>
-          <View style={[s.row, { justifyContent: "space-between" }]}>
-            <Text style={s.kicker}>{String(i + 1).padStart(2, "0")}</Text>
+          <View style={[s.row, { justifyContent: "flex-end" }]}>
             <Text style={[s.kicker, { color: full ? C.navy : C.olive }]}>
               {full ? "Patrocinado" : `${taken} / ${pkg.capacity} tomados`}
             </Text>
@@ -85,7 +84,7 @@ function PackageBlock({ pkg, i, photo, logos }: { pkg: Package; i: number; photo
           {pkg.sponsorships.map((sp) => {
             const img = logos.get(sp.id);
             return (
-              <View style={[s.logoBox, { backgroundColor: "#ffffff" }]} key={sp.id}>
+              <View style={[s.logoBox, { backgroundColor: sp.logo_bg === "dark" ? C.navy : "#ffffff" }]} key={sp.id}>
                 {img ? <Image src={img} style={s.logo} /> : <Text style={{ fontSize: 8 }}>{sp.company_name}</Text>}
               </View>
             );
@@ -124,8 +123,8 @@ function Brochure({ ev, photos, logos, logoCF }: { ev: BrochureEvent; photos: (I
       {/* Un paquete por página, para que no se lean como combo */}
       {ev.packages.map((p, i) => (
         <Page key={p.id} size="A4" orientation="landscape" style={s.page}>
-          <Text style={[s.kicker, { marginBottom: 10 }]}>Oportunidades de patrocinio · {String(i + 1).padStart(2, "0")} / {String(ev.packages.length).padStart(2, "0")}</Text>
-          <PackageBlock pkg={p} i={i} photo={photos[i]} logos={logos} />
+          <Text style={[s.kicker, { marginBottom: 10 }]}>Oportunidades de patrocinio</Text>
+          <PackageBlock pkg={p} photo={photos[i]} logos={logos} />
         </Page>
       ))}
 

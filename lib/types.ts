@@ -4,6 +4,7 @@ export type Sponsorship = {
   company_name: string;
   hubspot_company_id: string | null;
   logo_url: string;
+  logo_bg: "light" | "dark";
   created_by: string | null;
   created_at: string;
 };

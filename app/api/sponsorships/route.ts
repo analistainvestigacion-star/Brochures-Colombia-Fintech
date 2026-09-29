@@ -15,6 +15,7 @@ export async function POST(request: Request) {
   const companyName = String(form.get("companyName") ?? "").trim();
   const hubspotId = String(form.get("hubspotId") ?? "") || null;
   const logo = form.get("logo");
+  const logoBg = form.get("logoBg") === "dark" ? "dark" : "light";
 
   if (!packageId || !companyName) return NextResponse.json({ error: "Faltan datos" }, { status: 400 });
   if (!(logo instanceof File) || logo.type !== "image/png" || logo.size > MAX_LOGO_BYTES) {
@@ -40,6 +41,7 @@ export async function POST(request: Request) {
     company_name: companyName,
     hubspot_company_id: hubspotId,
     logo_url: logoUrl,
+    logo_bg: logoBg,
     created_by: actor,
   });
   if (error) {

@@ -16,6 +16,7 @@ export function TakeModal({ pkg, onClose, onDone }: { pkg: Package; onClose: () 
   const [name, setName] = useState("");
   const [logo, setLogo] = useState<Blob | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
+  const [logoBg, setLogoBg] = useState<"light" | "dark">("light");
   const [logoState, setLogoState] = useState<"none" | "loading" | "missing">("none");
 
   const [saving, setSaving] = useState(false);
@@ -43,8 +44,9 @@ export function TakeModal({ pkg, onClose, onDone }: { pkg: Package; onClose: () 
   useEffect(() => () => { if (preview) URL.revokeObjectURL(preview); }, [preview]);
 
   async function applyBlob(blob: Blob) {
-    const png = await normalizeLogo(blob);
+    const { png, light } = await normalizeLogo(blob);
     setLogo(png);
+    setLogoBg(light ? "dark" : "light");
     setPreview(URL.createObjectURL(png));
   }
 
@@ -100,6 +102,7 @@ export function TakeModal({ pkg, onClose, onDone }: { pkg: Package; onClose: () 
     body.set("packageId", pkg.id);
     body.set("companyName", name.trim());
     if (company) body.set("hubspotId", company.id);
+    body.set("logoBg", logoBg);
     body.set("logo", new File([logo], "logo.png", { type: "image/png" }));
     const res = await fetch("/api/sponsorships", { method: "POST", body });
     setSaving(false);
@@ -167,10 +170,17 @@ export function TakeModal({ pkg, onClose, onDone }: { pkg: Package; onClose: () 
             )}
 
             {preview && (
-              <div className="preview" aria-label="Vista previa del logo">
-                <div><img src={preview} alt="Vista previa sobre blanco" /></div>
-                <div className="gray"><img src={preview} alt="Vista previa sobre gris" /></div>
-              </div>
+              <>
+                <div className="preview" aria-label="Vista previa del logo">
+                  <div className={logoBg === "dark" ? "dark" : undefined}><img src={preview} alt="Así se verá en el brochure" /></div>
+                  <div className="gray"><img src={preview} alt="Vista previa sobre gris" /></div>
+                </div>
+                <div className="bg-choice">
+                  <span>Fondo del logo:</span>
+                  <button type="button" className={`btn btn-sm btn-ghost${logoBg === "light" ? " on" : ""}`} onClick={() => setLogoBg("light")}>Claro</button>
+                  <button type="button" className={`btn btn-sm btn-ghost${logoBg === "dark" ? " on" : ""}`} onClick={() => setLogoBg("dark")}>Oscuro</button>
+                </div>
+              </>
             )}
 
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -180,7 +190,7 @@ export function TakeModal({ pkg, onClose, onDone }: { pkg: Package; onClose: () 
               <button className="btn btn-sm btn-ghost" onClick={reset}>Buscar otra empresa</button>
               <input ref={fileRef} type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" hidden onChange={onFile} />
             </div>
-            <p className="hint">PNG con fondo transparente o SVG se ven mejor. Se recorta y ajusta automáticamente.</p>
+            <p className="hint">PNG con fondo transparente o SVG se ven mejor. Se recorta solo; si el logo es claro (blanco, amarillo) se sugiere fondo oscuro.</p>
           </>
         )}
 

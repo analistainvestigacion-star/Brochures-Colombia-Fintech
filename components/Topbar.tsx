@@ -18,7 +18,7 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap">
         <img src="/brand/logo-gris-h.svg" alt="Colombia Fintech" />
-        <span>© {new Date().getFullYear()} Colombia Fintech</span>
+        <span>© {new Date().getFullYear()} Colombia Fintech · <a href="/admin">Acceso equipo CF</a></span>
       </div>
     </footer>
   );

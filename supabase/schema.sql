@@ -43,9 +43,13 @@ create table if not exists public.sponsorships (
   company_name        text not null,
   hubspot_company_id  text,
   logo_url            text not null,
+  logo_bg             text not null default 'light' check (logo_bg in ('light', 'dark')),
   created_by          text,
   created_at          timestamptz not null default now()
 );
+-- Fondo del recuadro del logo (oscuro para logos claros, p. ej. Lulo Bank)
+alter table public.sponsorships add column if not exists logo_bg text not null default 'light';
+
 create index if not exists sponsorships_package_idx on public.sponsorships(package_id);
 
 -- Historial: quién tomó / liberó qué y cuándo

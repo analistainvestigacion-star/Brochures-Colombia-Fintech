@@ -93,8 +93,8 @@ export default async function EventPage({ params }: Props) {
             </div>
           </div>
           <div className="packages">
-            {ev.packages.map((p, i) => (
-              <PackageCard key={p.id} pkg={p} index={i} total={ev.packages.length} />
+            {ev.packages.map((p) => (
+              <PackageCard key={p.id} pkg={p} />
             ))}
           </div>
         </div>

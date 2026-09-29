@@ -172,7 +172,8 @@
       "hubspot_company_id": null,
       "logo_url": "/events/golf/logos/snowflake.png",
       "created_by": "demo",
-      "created_at": "2026-09-01T00:00:00Z"
+      "created_at": "2026-09-01T00:00:00Z",
+      "logo_bg": "light"
      }
     ]
    },
@@ -290,7 +291,8 @@
       "hubspot_company_id": null,
       "logo_url": "/events/golf/logos/lulo-bank.png",
       "created_by": "demo",
-      "created_at": "2026-09-01T00:00:00Z"
+      "created_at": "2026-09-01T00:00:00Z",
+      "logo_bg": "dark"
      }
     ]
    },
@@ -437,7 +439,8 @@
       "hubspot_company_id": null,
       "logo_url": "/events/golf/logos/payments-way.png",
       "created_by": "demo",
-      "created_at": "2026-09-01T00:00:00Z"
+      "created_at": "2026-09-01T00:00:00Z",
+      "logo_bg": "light"
      }
     ]
    }

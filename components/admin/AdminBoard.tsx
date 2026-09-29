@@ -37,7 +37,7 @@ export function AdminBoard({ packages }: { packages: Package[] }) {
                 <div className="admin-sponsors">
                   {pkg.sponsorships.map((s) => (
                     <div className="admin-sponsor" key={s.id}>
-                      <img src={s.logo_url} alt="" />
+                      <img src={s.logo_url} alt="" className={s.logo_bg === "dark" ? "dark" : undefined} />
                       <span>{s.company_name}</span>
                       <button className="btn btn-sm btn-danger" disabled={busy === s.id} onClick={() => release(pkg, s)}>
                         {busy === s.id ? "…" : "Liberar"}
