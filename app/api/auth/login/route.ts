@@ -14,6 +14,11 @@ export async function POST(request: Request) {
     email: email!.trim().toLowerCase(),
     options: { emailRedirectTo: `${origin}/auth/callback` },
   });
-  if (error) return NextResponse.json({ error: error.message }, { status: 400 });
+  if (error) {
+    const msg = /rate limit/i.test(error.message)
+      ? "Se alcanzó el límite de correos de acceso por hora. Espera un rato e inténtalo de nuevo, o usa el último enlace que te llegó."
+      : error.message;
+    return NextResponse.json({ error: msg }, { status: 429 });
+  }
   return NextResponse.json({ ok: true });
 }
