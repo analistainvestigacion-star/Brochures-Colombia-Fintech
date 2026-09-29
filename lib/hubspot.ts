@@ -10,8 +10,12 @@ export type HubspotCompany = {
 };
 
 async function hs(path: string, init?: RequestInit) {
-  const token = process.env.HUBSPOT_TOKEN;
-  if (!token) throw new Error("Falta HUBSPOT_TOKEN");
+  // Tolera errores comunes al pegar el token: espacios, comillas o el prefijo "Bearer"
+  const token = (process.env.HUBSPOT_TOKEN ?? "").trim().replace(/^["']|["']$/g, "").replace(/^Bearer\s+/i, "");
+  if (!token) throw new Error("Falta HUBSPOT_TOKEN en Vercel");
+  if (!token.startsWith("pat-")) {
+    throw new Error("HUBSPOT_TOKEN no parece un token de Private App (debe empezar por pat-). Revise el valor en Vercel.");
+  }
   const res = await fetch(API + path, {
     ...init,
     headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json", ...init?.headers },
