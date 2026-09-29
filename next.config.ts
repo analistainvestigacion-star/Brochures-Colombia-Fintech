@@ -6,6 +6,10 @@ const supabaseHost = process.env.NEXT_PUBLIC_SUPABASE_URL
 
 const config: NextConfig = {
   serverExternalPackages: ["@react-pdf/renderer"],
+  // pdfkit carga sus tipografías estándar de forma dinámica y Vercel no las detecta solo
+  outputFileTracingIncludes: {
+    "/[event]/pdf": ["./node_modules/pdfkit/js/standard-fonts/**", "./node_modules/pdfkit/js/data/**"],
+  },
   images: {
     remotePatterns: [{ protocol: "https", hostname: supabaseHost }],
   },
